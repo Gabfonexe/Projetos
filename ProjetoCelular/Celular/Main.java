@@ -11,7 +11,7 @@ public class Main{
     Scanner sc = new Scanner(System.in);
     Sistema sistema = new Sistema();
     LimparTela limpar = new LimparTela();
-    ValidarNumero validar = new ValidarNumero();
+    
 
     boolean ligado = true;
 
@@ -39,17 +39,27 @@ public class Main{
           Integer num = sc.nextInt();
           System.out.println();
           limpar.limparTela();
+          ValidarNumero validar = new ValidarNumero(num);
+          //validar.validarNumero(num);
+          //validar.validarNumero2(num);
 
-          validar.validarNumero(num);
-
-            switch (num) {
+            switch (validar.validarNumero(num)) {
               case 1:
                 System.out.println(". . . Abrindo aplicativo de Camêra . . ."); Thread.sleep(2000);
                 sistema.tirarFoto(); Thread.sleep(1000);
                 sistema.gravarVideo(); Thread.sleep(1000);
                 sistema.armazenar(); Thread.sleep(1000);
                 System.out.println("-------------------------------------------");
-                break;
+                System.out.println("Aperte 1 para retornar ao menu ou pressione qualquer outra tecla para desligar o celular");
+                int n = sc.nextInt();
+                if (n == 1){
+                  break;
+                }
+                else{
+                  ligado = false;
+                  System.out.println("Desligando o celular . . ."); Thread.sleep(1000);
+                  break;
+                }
               
               case 2:
                 System.out.println(". . . Abrindo aplicativo de Música . . ."); Thread.sleep(2000);
@@ -97,8 +107,6 @@ public class Main{
           System.out.println("Desligando o celular . . .");
 
           String[] vetor = new String[10];
-      
-
           for(int i=0; i<vetor.length; i++){
             vetor[i] += "teste";
             System.out.println(vetor[i]);
