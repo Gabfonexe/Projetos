@@ -63,12 +63,6 @@ public class Sistema implements Camera, NavegadorInternet, Gps, Telefonar, Repro
   }
 
   @Override
-  public void discar() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'discar'");
-  }
-
-  @Override
   public void acessarCoordenadas() {
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'acessarCoordenadas'");
@@ -84,6 +78,30 @@ public class Sistema implements Camera, NavegadorInternet, Gps, Telefonar, Repro
   public void acessarInternet() {
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'acessarInternet'");
+  }
+
+  @Override
+  public void selecionarMusica() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'selecionarMusica'");
+  }
+
+  @Override
+  public void iniciarCorreioVoz() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'iniciarCorreioVoz'");
+  }
+
+  @Override
+  public void adicionarAba() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'adicionarAba'");
+  }
+
+  @Override
+  public void atualizarPagina() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'atualizarPagina'");
   }
   
 }
