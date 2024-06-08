@@ -10,21 +10,42 @@ public class Main{
     Scanner sc = new Scanner(System.in);
     Sistema sistema = new Sistema();
 
-    try{
-      System.out.println("Deseja iniciar o sistema ? [S] / [N]");
-    String resposta = sc.next().toUpperCase();
-    if(resposta == "S"){
+    boolean ligado = true;
+
+    while (ligado){
+
+      try{
+
+        System.out.println("Deseja iniciar o sistema ? [SIM] / [NAO]");
+        char resposta = sc.next().charAt(0);
+
+        System.out.println("-------------------------------------------");
+
+        if(resposta == 's'){
+          
+          System.out.println(sistema.rodarSistema()); // método de retorno 
+          for (int i=0; i < 5; i++){
+            System.out.println(".");
+          }
+          System.out.println();
+        }
+        else{
+          System.out.println("Desligando o celular . . .");
+          System.out.println("-------------------------------------------");
+        }
+
+      }
+
+      catch(Exception e){
+        System.out.println(e.getMessage());
+      }
+      
+  
+  
 
     }
-    System.out.println(sistema.rodarSistema()); // método de retorno 
-    }
 
-    catch(Exception e){
-      System.out.println(e.getMessage());
-    }
-    
-    
-    
+        
   }
   
 }
