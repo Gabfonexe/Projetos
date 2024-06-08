@@ -40,6 +40,13 @@ public class ValidarNumero {
 
   }
   
+  public static void main(String[] args) {
+    
+    ValidarNumero validar = new ValidarNumero();
+
+
+    validar.validarNumero(6);
+  }
 
   
 }
