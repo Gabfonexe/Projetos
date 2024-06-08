@@ -28,6 +28,22 @@ public class Main{
             System.out.println(".");
           }
           System.out.println();
+
+          System.out.printf("Digite a opção desejada: \n [1] Camera\n [2] Música\n [3] Internet\n [4]Telefone\n [5]GPS\n \n ");
+          Integer num = sc.nextInt();
+          System.out.println();
+
+          switch (num) {
+            case 1:
+              System.out.println(". . . Abrindo aplicativo de Camêra . . .");
+              
+
+              
+              break;
+          
+            default:
+              break;
+          }
         }
         else{
           System.out.println("Desligando o celular . . .");
