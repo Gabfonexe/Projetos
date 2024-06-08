@@ -11,6 +11,7 @@ public class Main{
     Scanner sc = new Scanner(System.in);
     Sistema sistema = new Sistema();
     LimparTela limpar = new LimparTela();
+    
 
     boolean ligado = true;
 
@@ -39,8 +40,12 @@ public class Main{
           System.out.println();
           limpar.limparTela();
 
-          boolean loop = true;
-          while (loop){
+          if (num > 5){
+            System.out.println("Por favor, Digite um número entre 1 - 5");
+            continue;
+
+          }
+    
             switch (num) {
               case 1:
                 System.out.println(". . . Abrindo aplicativo de Camêra . . ."); Thread.sleep(2000);
@@ -85,9 +90,9 @@ public class Main{
                 break;
             
               default:
-                System.out.println("Digite um número entre 1 - 5 ");
+                
                 break;
-            }
+            
 
           }
           
