@@ -1,5 +1,6 @@
 package ProjetoCelular.Celular;
 import java.util.Scanner;
+import java.lang.Exception;
 
 import ProjetoCelular.Sistema.Sistema;
 
@@ -16,10 +17,11 @@ public class Main{
 
     }
     System.out.println(sistema.rodarSistema()); // método de retorno 
-
-
     }
-    catch ()
+
+    catch(Exception e){
+      System.out.println(e.getMessage());
+    }
     
     
     
