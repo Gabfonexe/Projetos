@@ -27,22 +27,52 @@ public class Main{
         if(resposta == 's'){
           
           System.out.println(sistema.rodarSistema()); // método de retorno 
-          for (int i=0; i < 5; i++){
-            System.out.println("... Carregando");
+          for (int i=0; i < 3; i++){
+            System.out.println("... Carregando"); Thread.sleep(1000);
           }
+          Thread.sleep(2000);
           System.out.println();
+          limpar.limparTela();
 
-          System.out.printf("Digite a opção desejada: \n [1] Camera\n [2] Música\n [3] Internet\n [4]Telefone\n [5]GPS\n \n ");
+          System.out.printf("Digite a opção desejada: \n [1] Camera\n [2] Música\n [3] Internet\n [4] Telefone\n [5] GPS\n \n ");
           Integer num = sc.nextInt();
           System.out.println();
+          limpar.limparTela();
+
 
           switch (num) {
             case 1:
-              System.out.println(". . . Abrindo aplicativo de Camêra . . .");
+              System.out.println(". . . Abrindo aplicativo de Camêra . . ."); Thread.sleep(2000);
+              sistema.tirarFoto(); Thread.sleep(1000);
+              sistema.gravarVideo(); Thread.sleep(1000);
+              sistema.armazenar(); Thread.sleep(1000);
+              System.out.println("-------------------------------------------");
+              break;
+            
+            case 2:
+              System.out.println(". . . Abrindo aplicativo de Música . . ."); Thread.sleep(2000);
+              sistema.selecionarMusica(); Thread.sleep(1000);
+              sistema.tocarMusica(); Thread.sleep(1000);
+              sistema.pausarMusica(); Thread.sleep(1000);
+              sistema.proximaMusica(); Thread.sleep(1000);
+              sistema.anteriorMusica(); Thread.sleep(1000);
+              System.out.println("-------------------------------------------");
+              break;
 
-              sistema.tirarFoto();
-              sistema.gravarVideo();
-              sistema.armazenar();
+            case 3:
+              System.out.println(". . . Abrindo o Navegador de Internet . . ."); Thread.sleep(2000);
+              sistema.acessarInternet(); Thread.sleep(1000);
+              sistema.adicionarAba(); Thread.sleep(1000);
+              sistema.atualizarPagina(); Thread.sleep(1000);
+              System.out.println("-------------------------------------------");
+              break;
+
+            case 4:
+              System.out.println(". . . Abrindo lista de Contatos . . ."); Thread.sleep(2000);
+              sistema.armazenarContato(); Thread.sleep(1000);
+              sistema.ligar(); Thread.sleep(1000);
+              sistema.iniciarCorreioVoz(); Thread.sleep(1000);
+              sistema.desligar(); Thread.sleep(1000);
               System.out.println("-------------------------------------------");
               break;
           
@@ -50,9 +80,15 @@ public class Main{
               break;
           }
         }
-        else{
+        else if (resposta == 'n'){
           System.out.println("Desligando o celular . . .");
-          System.out.println("-------------------------------------------");
+          for(int i=0; i<10; i++){
+            String[] vetor = new String[i];
+            vetor[i] = "-";
+            System.out.println(vetor[i]);
+            vetor[i] += "-";
+          }
+          System.out.println("-");
           ligado = false;
         }
 

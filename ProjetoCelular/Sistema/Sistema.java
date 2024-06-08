@@ -81,7 +81,7 @@ public class Sistema implements Camera, NavegadorInternet, Gps, Telefonar, Repro
 
   @Override
   public void iniciarCorreioVoz() {
-    System.out.println("Iniciando correio de voz: ................");
+    System.out.println("Iniciando correio de voz: 'Por favor, me ligue quando estiver disponível' ");
   }
 
   @Override
