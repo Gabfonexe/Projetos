@@ -1,5 +1,6 @@
 package ProjetoCelular.Sistema;
 
-public class ReprodutorMusical {
+public interface ReprodutorMusical {
 
+  public void 
 }

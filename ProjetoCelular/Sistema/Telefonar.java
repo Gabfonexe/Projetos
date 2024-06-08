@@ -1,5 +1,5 @@
 package ProjetoCelular.Sistema;
 
-public class Telefonar {
+public interface Telefonar {
   
 }

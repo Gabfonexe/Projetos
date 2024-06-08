@@ -1,5 +1,7 @@
 package ProjetoCelular.Sistema;
 
-public class Camera {
+public interface Camera {
+
+  public void tirarFoto();
   
 }
