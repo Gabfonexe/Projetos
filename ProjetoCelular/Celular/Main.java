@@ -1,6 +1,7 @@
 package ProjetoCelular.Celular;
 import java.util.Scanner;
 import java.lang.Exception;
+import ProjetoCelular.Limpartela.LimparTela;
 
 import ProjetoCelular.Sistema.Sistema;
 
@@ -9,6 +10,7 @@ public class Main{
 
     Scanner sc = new Scanner(System.in);
     Sistema sistema = new Sistema();
+    LimparTela limpar = new LimparTela();
 
     boolean ligado = true;
 
@@ -18,14 +20,15 @@ public class Main{
 
         System.out.println("Deseja iniciar o sistema ? [SIM] / [NAO]");
         char resposta = sc.next().charAt(0);
-
+        limpar.limparTela();
+        
         System.out.println("-------------------------------------------");
 
         if(resposta == 's'){
           
           System.out.println(sistema.rodarSistema()); // método de retorno 
           for (int i=0; i < 5; i++){
-            System.out.println(".");
+            System.out.println("... Carregando");
           }
           System.out.println();
 
@@ -36,9 +39,11 @@ public class Main{
           switch (num) {
             case 1:
               System.out.println(". . . Abrindo aplicativo de Camêra . . .");
-              
 
-              
+              sistema.tirarFoto();
+              sistema.gravarVideo();
+              sistema.armazenar();
+              System.out.println("-------------------------------------------");
               break;
           
             default:
