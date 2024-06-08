@@ -32,6 +32,7 @@ public class Main{
         else{
           System.out.println("Desligando o celular . . .");
           System.out.println("-------------------------------------------");
+          ligado = false;
         }
 
       }
