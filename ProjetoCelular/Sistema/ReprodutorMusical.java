@@ -1,4 +1,4 @@
-package Projeto-Celular.Sistema;
+package ProjetoCelular.Sistema;
 
 public class ReprodutorMusical {
 
