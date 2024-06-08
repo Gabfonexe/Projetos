@@ -2,106 +2,93 @@ package ProjetoCelular.Sistema;
 
 public class Sistema implements Camera, NavegadorInternet, Gps, Telefonar, ReprodutorMusical{
 
+
+
+  
+
   @Override
   public void tirarFoto() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'tirarFoto'");
+    System.out.println("Tirando Foto");
   }
 
   @Override
   public void gravarVideo() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'gravarVideo'");
+    System.out.println("Gravando Vídeo");
   }
 
   @Override
   public void armazenar() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'armazenar'");
+    System.out.println("Armazenando na galeria");
   }
 
   @Override
   public void tocarMusica() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'tocarMusica'");
+    System.out.println("Tocando música");
   }
 
   @Override
   public void pausarMusica() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'pausarMusica'");
+    System.out.println("Música pausada");
   }
 
   @Override
   public void proximaMusica() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'proximaMusica'");
+    System.out.println("Avançando Playlist");
   }
 
   @Override
   public void anteriorMusica() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'anteriorMusica'");
+    System.out.println("Retrocendo Playlist");
   }
 
   @Override
   public void armazenarContato() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'armazenarContato'");
+    System.out.println("Contato Armazenado");
   }
 
   @Override
   public void ligar() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'ligar'");
+    System.out.println("Ligando...");
   }
 
   @Override
   public void desligar() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'desligar'");
+    System.out.println("Desligando...");
   }
 
   @Override
   public void acessarCoordenadas() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'acessarCoordenadas'");
+    System.out.println("Acessando coordendas geográficas");
   }
 
   @Override
   public void fornecerLocalizacao() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'fornecerLocalizacao'");
+    System.out.println("Gerando localização atual...");
   }
 
   @Override
   public void acessarInternet() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'acessarInternet'");
+    System.out.println("Acessando o navegador");
   }
 
   @Override
   public void selecionarMusica() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'selecionarMusica'");
+    System.out.println("Música selecionada");
   }
 
   @Override
   public void iniciarCorreioVoz() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'iniciarCorreioVoz'");
+    System.out.println("Iniciando correio de voz: ................");
   }
 
   @Override
   public void adicionarAba() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'adicionarAba'");
+    System.out.println("Adicionando aba no navegador");
   }
 
   @Override
   public void atualizarPagina() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'atualizarPagina'");
+    System.out.println("Página Atualizada");
   }
   
 }
