@@ -2,9 +2,12 @@ package ProjetoCelular.Sistema;
 
 public class Sistema implements Camera, NavegadorInternet, Gps, Telefonar, ReprodutorMusical{
 
+ 
+  private String rodarSistema(){
+    return "Iniciando Sistema . . .";
+  }
 
 
-  
 
   @Override
   public void tirarFoto() {
