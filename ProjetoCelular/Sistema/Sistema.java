@@ -1,6 +1,6 @@
 package ProjetoCelular.Sistema;
 
-public class Sistema implements Camera{
+public class Sistema implements Camera, NavegadorInternet{
 
   @Override
   public void tirarFoto() {
