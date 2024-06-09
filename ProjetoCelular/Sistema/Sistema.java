@@ -3,11 +3,13 @@ package ProjetoCelular.Sistema;
 public class Sistema implements Camera, NavegadorInternet, Gps, Telefonar, ReprodutorMusical{
 
  
-  public String rodarSistema(){
-    return "Iniciando Sistema . . .";
+  public void rodarSistema() throws InterruptedException{
+
+    String texto = "SISTEMA INICIANDO";
+    for (int i=0; i<texto.length(); i++) {
+      System.out.print(texto.charAt(i)); Thread.sleep(150);
+    }
   }
-
-
 
   @Override
   public void tirarFoto() {

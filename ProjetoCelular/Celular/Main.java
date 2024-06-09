@@ -18,24 +18,20 @@ public class Main {
     while (ligado) {
 
       try {
-        System.out.println("Deseja iniciar o sistema ? [s] / [n]"); 
+        System.out.println("Deseja iniciar o sistema ? [s] / [n]");
         char resposta = sc.next().charAt(0);
         limpar.limparTela();
-        if (resposta != 's' && resposta != 'n'){
+        if (resposta != 's' && resposta != 'n') {
           Thread.sleep(1000);
-          throw new ExceptionCelular("Digite [s] ou [n] \n"); 
+          throw new ExceptionCelular("Digite [s] ou [n] \n");
         }
         limpar.limparTela();
         System.out.println("-------------------------------------------");
 
         if (resposta == 's') {
 
-          System.out.println(sistema.rodarSistema()); // método de retorno
-          
-          String texto = "CARREGANDO";
-          for (int i = 0; i < texto.length(); i++) 
-            System.out.print(texto.charAt(i)); Thread.sleep(300);
-          
+          sistema.rodarSistema();
+
           Thread.sleep(2000);
           System.out.println();
           limpar.limparTela();
@@ -167,11 +163,12 @@ public class Main {
           System.out.println("Desligando o celular . . .");
 
           String[] vetor = new String[20];
-  
+
           for (int i = 0; i < vetor.length; i++) {
             vetor[i] = "=";
             vetor[i] += "-";
-            System.out.print(vetor[i]); Thread.sleep(300);
+            System.out.print(vetor[i]);
+            Thread.sleep(300);
           }
           System.out.println("-");
           ligado = false;
@@ -180,7 +177,7 @@ public class Main {
 
       catch (Exception e) {
         System.out.println(e.getMessage());
-      } 
+      }
     }
   }
 }
