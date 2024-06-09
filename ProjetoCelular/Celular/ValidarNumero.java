@@ -41,18 +41,8 @@ public class ValidarNumero {
   }
 
 
-  public void validarNumero2(Integer numero){
-    if(numero > 5){
-      System.out.println("Digite um número entre 1 - 5: ");
-      numero = sc.nextInt();
-      while(numero > 5){
-        System.out.println("Digite um número entre 1 - 5: ");
-        numero = sc.nextInt();
-        this.numero = numero;
-      }
-    }
-    
-  }
+
+
   
   public static void main(String[] args) {
     
