@@ -50,7 +50,7 @@ public class Main{
                 sistema.gravarVideo(); Thread.sleep(1000);
                 sistema.armazenar(); Thread.sleep(1000);
                 System.out.println("-------------------------------------------");
-                System.out.println("Aperte 1 para retornar ao menu ou pressione qualquer outra tecla para desligar o celular");
+                System.out.println("Aperte 1 para retornar ao menu ou pressione qualquer outro número para desligar o celular");
                 int a = sc.nextInt();
                 if (a == 1){
                   break;
@@ -69,7 +69,7 @@ public class Main{
                 sistema.proximaMusica(); Thread.sleep(1000);
                 sistema.anteriorMusica(); Thread.sleep(1000);
                 System.out.println("-------------------------------------------");
-                System.out.println("Aperte 1 para retornar ao menu ou pressione qualquer outra tecla para desligar o celular");
+                System.out.println("Aperte 1 para retornar ao menu ou pressione qualquer outro número para desligar o celular");
                 int b = sc.nextInt();
                 if (b == 1){
                   break;
@@ -86,7 +86,7 @@ public class Main{
                 sistema.adicionarAba(); Thread.sleep(1000);
                 sistema.atualizarPagina(); Thread.sleep(1000);
                 System.out.println("-------------------------------------------");
-                System.out.println("Aperte 1 para retornar ao menu ou pressione qualquer outra tecla para desligar o celular");
+                System.out.println("Aperte 1 para retornar ao menu ou pressione qualquer outro número para desligar o celular");
                 int c = sc.nextInt();
                 if (c == 1){
                   break;
@@ -104,7 +104,7 @@ public class Main{
                 sistema.iniciarCorreioVoz(); Thread.sleep(1000);
                 sistema.desligar(); Thread.sleep(1000);
                 System.out.println("-------------------------------------------");
-                System.out.println("Aperte 1 para retornar ao menu ou pressione qualquer outra tecla para desligar o celular");
+                System.out.println("Aperte 1 para retornar ao menu ou pressione qualquer outro número para desligar o celular");
                 int d = sc.nextInt();
                 if (d == 1){
                   break;
@@ -120,7 +120,7 @@ public class Main{
                 sistema.acessarCoordenadas(); Thread.sleep(1000);
                 sistema.fornecerLocalizacao(); Thread.sleep(1000);
                 System.out.println("-------------------------------------------");
-                System.out.println("Aperte 1 para retornar ao menu ou pressione qualquer outra tecla para desligar o celular");
+                System.out.println("Aperte 1 para retornar ao menu ou pressione qualquer outro número para desligar o celular");
                 int e = sc.nextInt();
                 if (e == 1){
                   break;
@@ -145,19 +145,14 @@ public class Main{
           System.out.println("-");
           ligado = false;
         }
-
       }
 
       catch(Exception e){
         System.out.println(e.getMessage());
       }
-      
-  
-  
-
-    }
-
-        
+      finally{
+        sc.close();
+      }
+    }        
   }
-  
 }
