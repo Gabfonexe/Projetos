@@ -1,10 +1,16 @@
 package ProjetoBanco.Contas;
 
-public interface ContaBancaria {
-
-  void saque(double valor);
-  void deposito(double valor);
-  void saldo();
+public class ContaBancaria {
   
+  protected String titular;
+  protected int agencia;
+  protected double saldo;
 
+  public ContaBancaria(String titular, int agencia, double saldo){
+    this.titular = titular;
+    this.agencia = agencia;
+    this.saldo = saldo;
+  }
+
+  
 }

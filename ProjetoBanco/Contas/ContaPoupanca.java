@@ -1,6 +1,6 @@
 package ProjetoBanco.Contas;
 
-public class ContaPoupanca implements ContaBancaria {
+public class ContaPoupanca implements IContaBancaria {
 
 
   private String titular;

@@ -1,9 +1,8 @@
 package ProjetoBanco;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
+import ProjetoBanco.Contas.ContaBancaria;
 import ProjetoBanco.Contas.ContaCorrente;
 import ProjetoBanco.Contas.ContaInvestimento;
 import ProjetoBanco.Contas.ContaPoupanca;
@@ -12,10 +11,7 @@ public class App {
   public static void main(String[] args) {
 
     Scanner sc = new Scanner(System.in);
-    List <ContaCorrente> listaCorrente = new ArrayList<>();
-    List<ContaPoupanca> listaPoupanca = new ArrayList<>();
-    List<ContaInvestimento> listaInvestimentos = new ArrayList<>(); 
-    
+
     try {
 
       boolean ligado = true;
@@ -34,8 +30,9 @@ public class App {
               System.out.println("Digite a sua Angência: ");
               int agencia = sc.nextInt();
               double saldo = 0;
-              listaCorrente.add(new ContaCorrente(titular, saldo, agencia));
-              System.out.println(listaCorrente.toString()); ligado = false;
+              ContaCorrente contaCorrente = new ContaCorrente();
+              contaCorrente.adicionarConta(titular, agencia, saldo);
+              System.out.println(contaCorrente.toString()); ligado = false;
               break;
             }
 
@@ -46,8 +43,9 @@ public class App {
               System.out.println("Digite a sua Angência: ");
               int agencia = sc.nextInt();
               double saldo = 0;
-              listaPoupanca.add(new ContaPoupanca(titular, saldo, agencia));
-              System.out.println(listaPoupanca.toString()); ligado = false;
+              
+              //listaPoupanca.add(new ContaPoupanca(titular, saldo, agencia));
+              //System.out.println(listaPoupanca.toString()); ligado = false;
               break;
             }
 
@@ -58,8 +56,8 @@ public class App {
               System.out.println("Digite a sua Angência: ");
               int agencia = sc.nextInt();
               double saldo = 0;
-              listaInvestimentos.add(new ContaInvestimento(titular, saldo, agencia));
-              System.out.println(listaInvestimentos.toString());ligado = false;
+              //listaInvestimentos.add(new ContaInvestimento(titular, saldo, agencia));
+              //System.out.println(listaInvestimentos.toString());ligado = false;
               break;
             }
 
@@ -83,9 +81,9 @@ public class App {
 
               if(n == 1){
                 System.out.println("Funcionando");
-                System.out.println(listaCorrente.toString());
-                listaCorrente.get(0).deposito(valor);
-                System.out.println(listaCorrente.listIterator(0).toString());
+                //System.out.println(listaCorrente.toString());
+                //listaCorrente.get(0).deposito(valor);
+                //System.out.println(listaCorrente.listIterator(0).toString());
               }
               break;
             

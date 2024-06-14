@@ -1,6 +1,6 @@
 package ProjetoBanco.Contas;
 
-public class ContaInvestimento implements ContaBancaria{
+public class ContaInvestimento implements IContaBancaria{
 
   private String titular;
   private double saldo;
