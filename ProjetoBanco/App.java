@@ -12,6 +12,10 @@ public class App {
 
     Scanner sc = new Scanner(System.in);
 
+    ContaCorrente contaCorrente = new ContaCorrente();
+    ContaPoupanca contaPoupanca = new ContaPoupanca();
+    ContaInvestimento contaInvestimento = new ContaInvestimento();
+
     try {
 
       boolean ligado = true;
@@ -30,7 +34,6 @@ public class App {
               System.out.println("Digite a sua Angência: ");
               int agencia = sc.nextInt();
               double saldo = 0;
-              ContaCorrente contaCorrente = new ContaCorrente();
               contaCorrente.adicionarConta(titular, agencia, saldo);
               System.out.println(contaCorrente.toString()); ligado = false;
               break;
@@ -43,9 +46,7 @@ public class App {
               System.out.println("Digite a sua Angência: ");
               int agencia = sc.nextInt();
               double saldo = 0;
-              ContaPoupanca contaPoupanca = new ContaPoupanca();
-              //listaPoupanca.add(new ContaPoupanca(titular, saldo, agencia));
-              //System.out.println(listaPoupanca.toString()); ligado = false;
+              contaPoupanca.adicionarConta(titular, agencia, saldo);
               break;
             }
 
@@ -56,8 +57,7 @@ public class App {
               System.out.println("Digite a sua Angência: ");
               int agencia = sc.nextInt();
               double saldo = 0;
-              //listaInvestimentos.add(new ContaInvestimento(titular, saldo, agencia));
-              //System.out.println(listaInvestimentos.toString());ligado = false;
+              contaInvestimento.adicionarConta(titular, saldo, agencia);
               break;
             }
 
@@ -81,9 +81,8 @@ public class App {
 
               if(n == 1){
                 System.out.println("Funcionando");
-                //System.out.println(listaCorrente.toString());
-                //listaCorrente.get(0).deposito(valor);
-                //System.out.println(listaCorrente.listIterator(0).toString());
+                contaCorrente.deposito(valor);
+                System.out.println(contaCorrente.toString());
               }
               break;
             

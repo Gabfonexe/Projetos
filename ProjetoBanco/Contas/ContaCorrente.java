@@ -17,12 +17,12 @@ public class ContaCorrente implements IContaBancaria {
 
   @Override
   public void saque(double valor) {
-    this.contaBancarias.get(0).saldo += valor;
+    this.contaBancarias.get(0).saldo -= valor;
   }
 
   @Override
   public void deposito(double valor) {
-    this.contaBancarias.get(0).saldo -= valor;
+    this.contaBancarias.get(0).saldo += valor;
   }
 
   @Override
