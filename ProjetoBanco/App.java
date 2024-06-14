@@ -85,6 +85,7 @@ public class App {
                 System.out.println("Funcionando");
                 System.out.println(listaCorrente.toString());
                 listaCorrente.get(0).deposito(valor);
+                System.out.println(listaCorrente.listIterator(0).toString());
               }
               break;
             

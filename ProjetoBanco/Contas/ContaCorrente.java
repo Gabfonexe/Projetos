@@ -19,7 +19,6 @@ public class ContaCorrente implements ContaBancaria {
   @Override
   public void saque(double valor) {
     this.saldo += valor;
-    
   }
 
   @Override
@@ -30,11 +29,6 @@ public class ContaCorrente implements ContaBancaria {
   @Override
   public void saldo() {
    System.out.println(saldo);
-  }
-
-  public void listaContas(){
-    List<ContaCorrente> lista = new ArrayList<>();
-    lista.add(new ContaCorrente(titular, saldo, agencia));
   }
  
   public String toString(){
