@@ -1,5 +1,8 @@
 package ProjetoBanco.Contas;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ContaCorrente implements ContaBancaria {
 
   private String titular;
@@ -29,6 +32,10 @@ public class ContaCorrente implements ContaBancaria {
    System.out.println(saldo);
   }
 
+  public void listaContas(){
+    List<ContaCorrente> lista = new ArrayList<>();
+    lista.add(new ContaCorrente(titular, saldo, agencia));
+  }
  
   public String toString(){
     return String.format(" Titular: %s\n Agência: %s\n Saldo: %.2f ", titular, agencia, saldo);
