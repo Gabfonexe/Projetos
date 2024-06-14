@@ -22,7 +22,7 @@ public class App {
 
       while (ligado) {
 
-        System.out.println("Qual tipo de conta você deseja abrir :\n \n [1]Corrente\n [2]Poupança\n [3] Investimento\n");
+        System.out.println("Qual tipo de conta você deseja abrir :\n \n [1] Corrente\n [2] Poupança\n [3] Investimento\n");
         int n = sc.nextInt();
       
         switch (n) {
@@ -82,14 +82,17 @@ public class App {
               if(n == 1){
                 contaCorrente.deposito(valor);
                 System.out.println(contaCorrente.toString());
+                ligado = false;
               }
               else if (n == 2){
                 contaPoupanca.deposito(valor);
                 System.out.println(contaPoupanca.toString());
+                ligado = false;
               }
               else if (n == 3){
                 contaInvestimento.deposito(valor);
                 System.out.println(contaInvestimento.toString());
+                ligado = false;
               }
               break;
             
@@ -98,18 +101,44 @@ public class App {
               System.out.println("Digite o valor de Saque: ");
               valor = sc.nextDouble();
 
-              contaCorrente.saque(valor);
-
-              
+              if(n == 1){
+                contaCorrente.saque(valor);
+                System.out.println(contaCorrente.toString());
+                ligado = false;
+              }
+              else if (n == 2){
+                contaPoupanca.saque(valor);
+                System.out.println(contaPoupanca.toString());
+                ligado = false;
+              }
+              else if (n == 3){
+                contaInvestimento.saque(valor);
+                System.out.println(contaInvestimento.toString());
+                ligado = false;
+              }       
               break;
   
             case 3:
-              
+              if(n == 1){
+                System.out.println(contaCorrente.toString());
+                ligado = false;
+              }
+              else if (n == 2){
+                System.out.println(contaPoupanca.toString());
+                ligado = false;
+              }
+              else if (n == 3){
+                System.out.println(contaInvestimento.toString());
+                ligado = false;
+              }
               break;
   
             default:
               break;
           }
+        }
+        else {
+          ligado = false; break;
         }
       }
     } catch (Exception e) {
