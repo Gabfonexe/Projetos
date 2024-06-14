@@ -28,10 +28,7 @@ public class ContaInvestimento implements ContaBancaria{
    System.out.println(saldo);
   }
 
-  @Override
-  public void infoConta(){
-    toString();
-  }
+  
 
   public String toString(){
     return String.format(" Titular: %s\n Agência: %s\n Saldo: %.2f ", titular, agencia, saldo);
