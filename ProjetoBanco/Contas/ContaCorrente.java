@@ -14,27 +14,28 @@ public class ContaCorrente implements ContaBancaria {
   }
 
   @Override
-  public void saque() {
+  public void saque(double valor) {
+    this.saldo += valor;
     
   }
 
   @Override
-  public void deposito() {
-    
+  public void deposito(double valor) {
+    this.saldo -= valor;
   }
 
   @Override
   public void saldo() {
-    
+   System.out.println(saldo);
   }
 
   @Override
   public void infoConta(){
-
+    toString();
   }
   
   public String toString(){
     return String.format(" Titular: %s\n Agência: %s\n Saldo: %.2f ", titular, agencia, saldo);
   }
-  
+
 }

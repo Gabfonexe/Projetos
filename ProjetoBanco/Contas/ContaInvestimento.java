@@ -13,23 +13,24 @@ public class ContaInvestimento implements ContaBancaria{
   }
 
   @Override
-  public void saque() {
+  public void saque(double valor) {
+    this.saldo += valor;
     
   }
 
   @Override
-  public void deposito() {
-    
+  public void deposito(double valor) {
+    this.saldo -= valor;
   }
 
   @Override
   public void saldo() {
-    
+   System.out.println(saldo);
   }
 
   @Override
   public void infoConta(){
-
+    toString();
   }
 
   public String toString(){
