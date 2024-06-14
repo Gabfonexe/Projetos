@@ -43,7 +43,7 @@ public class App {
               System.out.println("Digite a sua Angência: ");
               int agencia = sc.nextInt();
               double saldo = 0;
-              
+              ContaPoupanca contaPoupanca = new ContaPoupanca();
               //listaPoupanca.add(new ContaPoupanca(titular, saldo, agencia));
               //System.out.println(listaPoupanca.toString()); ligado = false;
               break;
