@@ -22,8 +22,7 @@ public class App {
 
       while (ligado) {
 
-        System.out
-            .println("Qual tipo de conta você deseja abrir :\n \n [1] Corrente\n [2] Poupança\n [3] Investimento\n");
+        System.out.println("Qual tipo de conta você deseja abrir :\n \n [1] Corrente\n [2] Poupança\n [3] Investimento\n");
         int n = sc.nextInt();
         lt.limparTela();
 

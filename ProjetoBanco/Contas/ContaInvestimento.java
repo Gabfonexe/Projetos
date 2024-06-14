@@ -53,12 +53,38 @@ public class ContaInvestimento implements IContaBancaria{
 
 class RiscoBaixo extends ContaInvestimento{
 
+  public RiscoBaixo(String titular, int agencia, double saldo){
+    super();
+  }
+
+  public double riscoBaixo(double valor){
+    return this.contaBancarias.get(0).saldo += valor * 0.09;
+  }
+
 }
 
 class RiscoMedio extends ContaInvestimento{
 
+  public RiscoMedio(String titular, int agencia, double saldo){
+    super();
+  }
+
+  public double riscoMedio(double valor){
+    return this.contaBancarias.get(0).saldo += valor * 0.09;
+  }
+
+
 }
 
 class RiscoAlto extends ContaInvestimento{
+
+
+  public RiscoAlto(String titular, int agencia, double saldo){
+    super();
+  }
+
+  public double riscoAlto(double valor){
+    return this.contaBancarias.get(0).saldo += valor * 0.09;
+  }
 
 }
