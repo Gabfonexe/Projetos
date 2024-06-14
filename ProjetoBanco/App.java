@@ -65,6 +65,7 @@ public class App {
               System.out.println("Qual tipo de investimento você deseja? \n\n [1] risco baixo - 9% a.a \n [2] risco médio - 16% a.a \n [3] risco alto - 23% a.a\n");
               int num = sc.nextInt();
               if (num == 1)
+                
                 contaInvestimento.riscoBaixo(saldo);
               if (num == 2)
                 contaInvestimento.riscoMedio(saldo);
