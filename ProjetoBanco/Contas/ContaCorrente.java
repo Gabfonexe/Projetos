@@ -2,22 +2,39 @@ package ProjetoBanco.Contas;
 
 public class ContaCorrente implements ContaBancaria {
 
-  @Override
-  public double saque() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'saque'");
+  private String titular;
+  private double saldo;
+  private int agencia;
+
+
+  public ContaCorrente(String titular, double saldo, int agencia){
+    this.titular = titular;
+    this.saldo = saldo;
+    this.agencia = agencia;
   }
 
   @Override
-  public double deposito() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'deposito'");
+  public void saque() {
+    
   }
 
   @Override
-  public double saldo() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'saldo'");
+  public void deposito() {
+    
+  }
+
+  @Override
+  public void saldo() {
+    
+  }
+
+  @Override
+  public void infoConta(){
+
+  }
+  
+  public String toString(){
+    return String.format(" Titular: %s\n Agência: %s\n Saldo: %.2f ", titular, agencia, saldo);
   }
   
 }

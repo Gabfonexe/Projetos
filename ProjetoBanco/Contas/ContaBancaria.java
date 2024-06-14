@@ -2,8 +2,9 @@ package ProjetoBanco.Contas;
 
 public interface ContaBancaria {
 
-  double saque();
-  double deposito();
-  double saldo();
+  void saque(double valor);
+  void deposito(double valor);
+  void saldo();
+  void infoConta();
 
 }
