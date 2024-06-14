@@ -50,7 +50,7 @@ public class App {
               int agencia = sc.nextInt();
               double saldo = 0;
               contaPoupanca.adicionarConta(titular, agencia, saldo);
-              
+
               break;
             }
 
@@ -116,10 +116,28 @@ public class App {
               } else if (n == 2) {
                 contaPoupanca.deposito(valor);
                 System.out.println(contaPoupanca.toString());
+                System.out.println("Deseja sair? [1] sim / [2] não ");
+                int num = sc.nextInt();
+                switch (num) {
+                  case 1:
+                    ligado = false;
+                    break;
+                  case 2:
+                    break; 
+                }
                 
               } else if (n == 3) {
                 contaInvestimento.deposito(valor);
                 System.out.println(contaInvestimento.toString());
+                System.out.println("Deseja sair? [1] sim / [2] não ");
+                int num = sc.nextInt();
+                switch (num) {
+                  case 1:
+                    ligado = false;
+                    break;
+                  case 2:
+                    break; 
+                }
                 
               }
               break;
@@ -176,6 +194,11 @@ public class App {
       }
 
       System.out.println("Deseja Adicionar Mais alguma conta? ");
+
+
+      System.out.println();
+
+      System.out.println(contaInvestimento.toString());
 
     } catch (Exception e) {
       System.out.println(e.getMessage());

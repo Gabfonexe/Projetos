@@ -50,3 +50,15 @@ public class ContaInvestimento implements IContaBancaria{
   }
   
 }
+
+class RiscoBaixo extends ContaInvestimento{
+
+}
+
+class RiscoMedio extends ContaInvestimento{
+
+}
+
+class RiscoAlto extends ContaInvestimento{
+
+}
