@@ -5,9 +5,10 @@ import ProjetoBanco.Model.LimparTela;
 import ProjetoBanco.Contas.ContaCorrente;
 import ProjetoBanco.Contas.ContaInvestimento;
 import ProjetoBanco.Contas.ContaPoupanca;
+import ProjetoBanco.ExceptionBanco.ExceptionBanco;
 
 public class App {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws ExceptionBanco{
 
     Scanner sc = new Scanner(System.in);
     LimparTela lt = new LimparTela();
@@ -49,19 +50,27 @@ public class App {
               int agencia = sc.nextInt();
               double saldo = 0;
               contaPoupanca.adicionarConta(titular, agencia, saldo);
+              
               break;
             }
 
           case 3:
             if (true) { 
-              
-              System.out.println("Qual tipo de investimento você deseja? \n\n [1] risco baixo - 9% a.a \n [2] risco médio - 16% a.a \n [3] risco alto - 23% a.a\n");
               System.out.println("Digite Seu nome: ");
               String titular = sc.next();
               System.out.println("Digite a sua Angência: ");
               int agencia = sc.nextInt();
               double saldo = 0;
               contaInvestimento.adicionarConta(titular, saldo, agencia);
+        
+              System.out.println("Qual tipo de investimento você deseja? \n\n [1] risco baixo - 9% a.a \n [2] risco médio - 16% a.a \n [3] risco alto - 23% a.a\n");
+              int num = sc.nextInt();
+              if (num == 1)
+                contaInvestimento.riscoBaixo(saldo);
+              if (num == 2)
+                contaInvestimento.riscoMedio(saldo);
+              if (num == 3)
+                contaInvestimento.riscoAlto(saldo);
               break;
             }
 

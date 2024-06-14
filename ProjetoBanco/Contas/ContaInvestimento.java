@@ -32,8 +32,18 @@ public class ContaInvestimento implements IContaBancaria{
    System.out.println(contaBancarias.get(0).saldo);
   }
 
-  
-  
+  public double riscoBaixo(double valor){
+    return this.contaBancarias.get(0).saldo += valor * 0.09;
+  }
+
+  public double riscoMedio(double valor){
+    return this.contaBancarias.get(0).saldo += valor * 0.16;
+  }
+
+  public double riscoAlto(double valor){
+    return this.contaBancarias.get(0).saldo += valor * 0.23;
+  }
+
 
   public String toString(){
     return String.format(" Titular: %s\n Agência: %s\n Saldo: %.2f ", contaBancarias.get(0).titular, contaBancarias.get(0).agencia, contaBancarias.get(0).saldo);

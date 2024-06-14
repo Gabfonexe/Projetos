@@ -30,6 +30,10 @@ public class ContaPoupanca implements IContaBancaria {
   }
 
 
+  public double rendimentoPoupanca(double valor){
+    return this.contaBancarias.get(0).saldo += valor * 0.04;
+  }
+
   public String toString(){
     return String.format(" Titular: %s\n Agência: %s\n Saldo: %.2f ", contaBancarias.get(0).titular, contaBancarias.get(0).agencia, contaBancarias.get(0).saldo);
   }
