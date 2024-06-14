@@ -80,13 +80,26 @@ public class App {
               double valor = sc.nextDouble();
 
               if(n == 1){
-                System.out.println("Funcionando");
                 contaCorrente.deposito(valor);
                 System.out.println(contaCorrente.toString());
+              }
+              else if (n == 2){
+                contaPoupanca.deposito(valor);
+                System.out.println(contaPoupanca.toString());
+              }
+              else if (n == 3){
+                contaInvestimento.deposito(valor);
+                System.out.println(contaInvestimento.toString());
               }
               break;
             
             case 2:
+              
+              System.out.println("Digite o valor de Saque: ");
+              valor = sc.nextDouble();
+
+              contaCorrente.saque(valor);
+
               
               break;
   
