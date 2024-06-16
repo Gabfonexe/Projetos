@@ -1,6 +1,6 @@
 package ProjetoBanco.Contas;
 
-public interface IContaBancaria {
+public interface IContaBancaria{
 
   void saque(double valor);
 

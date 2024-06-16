@@ -3,12 +3,13 @@ package ProjetoBanco.Contas;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ContaInvestimento implements IContaBancaria{
+public class ContaInvestimento  implements IContaBancaria{
 
-  List<ContaBancaria> contaBancarias;
+  protected List<ContaBancaria> contaBancarias;
 
 
   public ContaInvestimento(){
+    
     this.contaBancarias = new ArrayList<>();
   }
 
