@@ -1,4 +1,4 @@
-package ProjetoBanco;
+package exemplos;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,9 +30,9 @@ public class teste {
             transacoes.add(transacao);
             // Verifica e atualiza o saldo da conta com base no tipo de transação
             if ( transacao.getTipo() == 'D') {
-                saldo += valorTransacao;
+                saldo += transacao.getValor();
             } else if (transacao.getTipo() == 'S') {
-                saldo -= valorTransacao;
+                saldo -= transacao.getValor();
             }
         }
 
