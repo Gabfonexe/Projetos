@@ -44,6 +44,7 @@ class ContaPoupanca extends ContaBancaria {
     private double taxaJuros;
 
     public ContaPoupanca(int numero, String titular, double saldo, double taxaJuros) {
+        super(numero, titular, saldo);
         //TODO: Implementar adequadamente esta sobrecarga de construtores.
     }
 
